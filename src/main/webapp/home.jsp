@@ -9,11 +9,11 @@
 <%
 List<Category> categories = (List<Category>) request.getAttribute("categories");
 
-/* 🔥 NEW: Login Check */
+/*  NEW: Login Check */
 User user = (User) session.getAttribute("loggedInUser");
 boolean isLoggedIn = (user != null);
 
-/* 🔥 NEW: Cart Count */
+/*  NEW: Cart Count */
 int cartCount = 0;
 Map<Integer, Integer> cart = (Map<Integer, Integer>) session.getAttribute("cart");
 if(cart != null){
