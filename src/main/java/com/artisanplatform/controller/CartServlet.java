@@ -37,7 +37,7 @@ public class CartServlet extends HttpServlet {
 
                 cart.put(productId, cart.getOrDefault(productId, 0) + 1);
 
-                // ✅ SUCCESS MESSAGE
+                // SUCCESS MESSAGE
                 session.setAttribute("cartMessage",
                         "Item added to cart successfully!");
 
@@ -63,7 +63,7 @@ public class CartServlet extends HttpServlet {
 
         session.setAttribute("cart", cart);
 
-        // ✅ Redirect back to previous page
+        //  Redirect back to previous page
         String referer = request.getHeader("referer");
 
         if (referer != null) {
